@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Data - The Earth is Heating Up</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+
+		<!-- Google fonts stylesheet -->
+		<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+
+		<!-- CSS for this example -->
+		<style>
+			/* PAGE ONE STYLE */
+
+			body .page1, .page2 {
+				margin-top: 0px;
+				background: linear-gradient(180deg, rgba(0, 218, 166, 0.56) 20.67%, rgba(0, 87, 255, 0.56) 100%);
+				text-align: center;
+				font-family: 'Nunito', sans-serif;
+				height: 100vh;
+			}
+
+			/* APPLY GOOGLE FONTS */
+			body, p, mark {
+				font-family: 'Nunito', sans-serif;
+				font-weight: 400;
+			}
+
+			.page1 h5, h6, .h5, .h6 {
+				text-transform: uppercase;
+				font-family: 'Nunito', sans-serif;
+				font-weight: 700;
+				color: #333;
+				letter-spacing: 0.6px;
+			}
+			.page1 h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+				font-family: 'Nunito', sans-serif;
+				font-weight: 700;
+				color: #333;
+				letter-spacing: -0.6px;
+			}
+			.page1 .display-1, .display-2, .display-3, .display-4 {
+				font-family: 'Nunito', sans-serif;
+				font-weight: 700;
+				color: #333;
+				letter-spacing: -1.2px;
+			}
+
+
+
+			.page1 .heading p {
+				font-family: Nunito;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 23px;
+				font-size: 20px;
+				text-align: center;
+				color: #FFFFFF;
+			}
+
+			.page1 .heading h2 {
+				font-family: Nunito;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 29px;
+				font-size: 36px;
+				text-align: center;
+				color: #2F2F2F;
+			}
+
+
+			.page1 .moreinfo {
+				position:absolute;
+				margin: 0 auto;
+				bottom: 30px;
+				right: 0;
+				left: 0;
+			}
+
+			.page1 .moreinfo a {
+				font-family: Nunito;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 29px;
+				font-size: 25px;
+				letter-spacing: -0.41px;
+				color: #FFFFFF;
+			}
+
+
+
+			html {
+				height: 100vh;
+			}
+
+			.page1 h2 {
+				padding-top: 25px;
+				padding-bottom: 25px;
+			}
+
+      .page1 .chartAreaWrapper {
+           width: 90%;
+          /* overflow-x: scroll; */
+					margin: 0 auto;
+        }
+
+				/* slider */
+		.slider {
+			-webkit-appearance: none;
+			width: 90%;
+			height: 3px;
+			border-radius: 6px;
+			background-color: #ffffff;
+			outline: none;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+			margin-bottom: 1rem;
+		}
+		.slider::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 28px;
+			height: 28px;
+			border-radius: 14px;
+			background: #ffffff !important;
+			cursor: pointer;
+		}
+		.slider::-moz-range-thumb {
+			width: 18px;
+			height: 18px;
+			border-radius: 9px;
+			background: #007bff77 !important;
+			cursor: pointer;
+		}
+
+		.page1 .heading p {
+			padding-top: 35px;
+			padding-bottom: 20px;
+			margin: 0;
+
+
+		}
+
+	.page1 .heading .subhead {
+			padding-top: 0;
+			font-size: 10px;
+		}
+
+		#myChart {
+			display: inline-block;
+			margin: 0 auto;
+			max-width: 60vh;
+		}
+
+
+
+
+		/* PAGE TWO STYLE */
+
+		.page2 h5, h6, .h5, .h6 {
+			text-transform: uppercase;
+			font-family: 'Nunito', sans-serif;
+			font-weight: 700;
+			color: #333;
+			letter-spacing: 0.6px;
+		}
+
+		.page2 h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+			font-family: 'Nunito', sans-serif;
+			font-weight: 700;
+			color: #333;
+			letter-spacing: -0.6px;
+		}
+		.page2 .display-1, .display-2, .display-3, .display-4 {
+			font-family: 'Nunito', sans-serif;
+			font-weight: 700;
+			color: #333;
+			letter-spacing: -1.2px;
+		}
+
+
+		.page2 .heading p {
+			font-family: Nunito;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 23px;
+			font-size: 20px;
+			text-align: center;
+			color: #FFFFFF;
+		}
+
+		.page2 .heading h2 {
+			font-family: Nunito;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 29px;
+			font-size: 44px;
+			text-align: center;
+			color: #2F2F2F;
+		}
+
+
+		.page2 .goback {
+		padding-top: 10px;
+		}
+
+		.page2 .goback a {
+			font-family: Nunito;
+			font-style: normal;
+			font-weight: 400;
+
+			font-size: 20px;
+			letter-spacing: -0.41px;
+			color: #FFFFFF;
+		}
+
+
+		.page2 h2 {
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+
+
+	.page2 .heading p {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+
+	.page2 .figure {
+		padding-top: 20px;
+
+	}
+
+	.page2 .label {
+		padding-bottom: 20px;
+	}
+
+	.page2 .figure p {
+		font-family: Nunito;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 29px;
+		font-size: 59px;
+		text-align: center;
+		letter-spacing: -0.41px;
+
+		color: #FFFFFF;
+	}
+
+	.page2 .label p {
+		font-family: Nunito;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 29px;
+		font-size: 24px;
+		letter-spacing: -0.41px;
+
+		color: #2F2F2F;
+	}
+
+	.page2 .changescale {
+		display: inline-flex;
+		position: relative;
+    bottom: -95px;
+		/* left: 50%;
+		transform: translateX(-50%); */
+	}
+
+	.page2 .celsius, .farenheit {
+
+		width: 157px;
+		height: 48px;
+		background: #FFFFFF;
+		border-radius: 45px;
+		padding: 10px;
+
+
+	}
+
+	.page2 .celsius {
+		margin-right: 5px;
+	}
+
+	.page2 .farenheit {
+		margin-left: 5px;
+	}
+
+	.page2 .changescale p {
+
+		font-family: Nunito;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 29px;
+		font-size: 24px;
+		letter-spacing: -0.41px;
+		text-align: center;
+		margin: 0 auto;
+
+		color: #2F2F2F;
+	}
+
+	.page2 .active, .celsius:hover, .farenheit:hover {
+		background: #00DAA6;
+
+	}
+
+		</style>
+
+	</head>
+
+	<body>
+		<div class="page1" id="toppage">
+
+		<!-- CONTAINER -->
+		<div class="container">
+
+				</div>
+
+				<div class="heading">
+					<h2 id="intro">2013</h2>
+
+					<input id="slider1" class="slider" type="range" min="117" max="133" value="130" >
+
+					<p>global temperature anomaly<br> compared to average </p>
+
+					<p class="subhead"> (selected year displays in center of chart) </p>
+				</div>
+
+				<div class="chartWrapper">
+					<div class="chartAreaWrapper">
+						<canvas id="myChart" width="400" height="360"></canvas>
+					</div>
+				</div>
+
+				<div class="moreinfo">
+					<a href="#page2">MORE INFO</a>
+			</div>
+
+</div>
+
+<div class="page2" id="page2">
+
+		<div class="goback">
+			<a href="climate-data2.html"> BACK TO CHART </a>
+		</div>
+
+		<div class="heading">
+			<h2 id="intro2">2013</h2>
+		</div>
+
+		<!-- <input id="slider1" class="slider" type="range" min="117" max="133" value="130"> -->
+
+
+		<div class="numbers">
+			<div class="figure">
+				<p id="avg-temp">58.206º</p>
+			</div>
+
+			<div class="label">
+				<p>average temperature</p>
+			</div>
+
+			<div class="figure">
+				<p id="avg-change">+1.206</p>
+			</div>
+
+			<div class="label">
+				<p>change in average global  <br> surface temperature</p>
+			</div>
+
+			<div class="figure">
+				<p id="rank">#5</p>
+			</div>
+
+			<div class="label">
+				<p>warmest year on record</p>
+			</div>
+		</div>
+
+		<div class="changescale" id="btndiv">
+
+			<div class="celsius btn" id="btn-c">
+					<a href="#page2"><p>ºC</p></a>
+			</div>
+
+			<div class="farenheit btn active" id="btn-f">
+					<a href="#page2"><p>ºF</p></a>
+			</div>
+
+		</div>
+
+</div>
+
+
+		<!-- BOOTSTRAP JS DEPENDENCIES: first jQuery, then Popper.js, then Bootstrap JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+		<!-- CHART.JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+
+		<!-- DATA -->
+		<script src="js/noaa.js"></script>
+
+		<!-- CUSTOM JS -->
+		<script>
+
+		// Get the container element
+		var btnContainer = document.getElementById("btndiv");
+
+		// Get all buttons with class="btn" inside the container
+		var btns = btnContainer.getElementsByClassName("btn");
+
+		// Loop through the buttons and add the active class to the current/clicked button
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].addEventListener("click", function() {
+				var current = document.getElementsByClassName("active");
+				current[0].className = current[0].className.replace(" active", "");
+				this.className += " active";
+			});
+		}
+
+
+			// Function to sort 'array' by a 'key' value
+			var sortArray = function(array, key) {
+				// sort by value
+				array.sort(function (a, b) {
+				  return a[key] - b[key];
+				});
+			};
+
+			// Get array of 'key' values from 'array' of objects
+			var getChartData = function(array, key, minIndex=0, maxIndex=array.length) {
+				var dataArray = [];
+				for (var i = minIndex; i < maxIndex; i++) {
+					dataArray.push(array[i][key]);
+				}
+				// console.log(JSON.stringify(dataArray,null,2));
+				return dataArray;
+			};
+
+			// Function to change data points and update chart
+			var changeData = function (chart, data, labels, min, max) {
+				chart.config.data.datasets[0].data = data;
+				chart.config.data.labels = labels;
+				chart.config.data.datasets[0].backgroundColor = '#ea0404';
+				chart.config.options.scales.yAxes[0].ticks.min = min;
+				chart.config.options.scales.yAxes[0].ticks.max = max;
+				chart.update();
+			};
+
+			// sort array of objects by year
+			sortArray(noaa, 'Year');
+			// console.log(noaa);
+
+			// - - - - -
+
+			var sliderinput = 130;
+			var pg2sliderinput = sliderinput + 3;
+
+			// SLIDER INPUT FUNCTION
+			$('#slider1').on('input', function(e) {
+				//console.log(e);
+				// noaa data index range goes from 0 to 136
+				// slider range is set for 0 to 99 (use for min val)
+				// add 37 to the slider val (use for max val)
+				var min = +e.currentTarget.value;
+				var max = min + 7;
+				 console.log(min, max);
+				 sliderinput = +e.currentTarget.value;
+ 				$('#intro').html(sliderinput + 1883);
+ 				console.log(sliderinput);
+				var newData = getChartData(noaa, 'farenheit', min, max);
+				var newLabels = getChartData(noaa, 'Year', min, max);
+				changeData(myChart, newData, newLabels, 0, 2.0);
+				// update intro text with range of years shown
+				$('#intro').html(min + 1883);
+				$('#intro2').html(min + 1883);
+
+
+				pg2sliderinput = sliderinput + 3;
+
+				var avgtempf = noaa[pg2sliderinput].averagef + "º";
+	      var avgchangef = "+" + noaa[pg2sliderinput].farenheit;
+	      var rank = "#" + noaa[pg2sliderinput].rank;
+
+				var avgtempc = noaa[pg2sliderinput].averagec + "º";
+	      var avgchangec = "+" + noaa[pg2sliderinput].celsius;
+
+
+				$('#avg-temp').html(avgtempf);
+				$('#avg-change').html(avgchangef);
+				$('#rank').html(rank);
+
+				$('#btn-c').on('click', function() {
+	        $('#avg-temp').html(avgtempc);
+	        $('#avg-change').html(avgchangec);
+	        $('#rank').html(rank);
+	      });
+
+				$('#btn-f').on('click', function() {
+	        $('#avg-temp').html(avgtempf);
+	        $('#avg-change').html(avgchangef);
+	        $('#rank').html(rank);
+	      });
+
+			});
+
+			if (window.matchMedia("(max-width: 768px)").matches) {
+				// viewport is less than, or equal to, 768 pixels wide
+				// $("#myChart").css({ width: 900, height: 600 });
+				console.log('L',$("#myChart"));
+			} else {
+				// vviewport is greater than 768 pixels wide
+				// $("#myChart").css({ width: 900, height: 300 });
+				console.log('G',$("#myChart"));
+			}
+
+
+
+
+
+			var avgtempc = noaa[pg2sliderinput].averagec + "º";
+      var avgchangec = "+" + noaa[pg2sliderinput].celsius;
+      var rank = "#" + noaa[pg2sliderinput].rank;
+
+      $('#btn-c').on('click', function() {
+        $('#avg-temp').html(avgtempc);
+        $('#avg-change').html(avgchangec);
+        $('#rank').html(rank);
+      });
+
+
+      var avgtempf = noaa[pg2sliderinput].averagef + "º";
+      var avgchangef = "+" + noaa[pg2sliderinput].farenheit;
+      var rank = "#" + noaa[pg2sliderinput].rank;
+
+      $('#btn-f').on('click', function() {
+        $('#avg-temp').html(avgtempf);
+        $('#avg-change').html(avgchangef);
+        $('#rank').html(rank);
+      });
+
+			// DATA
+			var chartData = getChartData(noaa, 'farenheit', 130, 137);
+			var chartLabels = getChartData(noaa, 'Year', 130, 137);
+
+			// CONTEXT: where the chart goes
+			var ctx = $("#myChart");
+
+			// COLOR CALLBACK (PLUGIN METHOD)
+			var positiveColor = '#FB6D6D';
+			var negativeColor = '#389EFC';
+			Chart.pluginService.register({
+				beforeUpdate: function(chartInstance) {
+				  	chartInstance.data.datasets.forEach(function(dataset) {
+				    	dataset.backgroundColor = dataset.data.map(function(data) {
+				      		return data < 0 ? negativeColor + 'aa': positiveColor + 'aa';
+				      	});
+				      	dataset.hoverBackgroundColor = dataset.data.map(function(data) {
+				      		return data < 0 ? negativeColor : positiveColor;
+				      	});
+				    });
+			  	}
+			});
+
+			// CHART
+			var myChart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: chartLabels,
+					datasets: [{
+						data: chartData,
+
+					}]
+				},
+				options: {
+					scales: {
+
+
+
+						yAxes: [{
+
+							ticks: {
+								min: 0,
+								max: 2.0,
+								display: false,
+							},
+							gridLines: {
+								color: 'rgba(0, 0, 0, 0)',
+                lineWidth: 0,
+								zeroLineWidth: 1,
+								zeroLineColor: '#fff',
+
+            }
+					}],
+
+						xAxes: [{
+							ticks: {
+								min: -2.0,
+								max: 2.0,
+								display: true,
+							},
+							gridLines: {
+								color: 'rgba(0, 0, 0, 0)',
+                lineWidth: 0,
+								zeroLineWidth: 1,
+								zeroLineColor: '#fff',
+
+            }
+
+					}]
+
+					},
+        			tooltips: {
+						backgroundColor: '#fff',
+						cornerRadius: 0,
+						bodyFontColor: '#333',
+						titleFontColor: '#333',
+						displayColors: false,
+						borderColor: '#999',
+						borderWidth: 0.5,
+						xPadding: 10,
+						xPadding: 8,
+						callbacks: {
+			                label: function(tooltipItem, data) {
+			                    // console.log(tooltipItem, data);
+			                    var label = tooltipItem.yLabel ;
+			                    return label;
+			                }
+			            }
+					},
+					animation: {
+			            duration: 2000
+			        },
+					responsive: true,
+				  	legend: {
+				    	display: false
+				  	}
+				}
+			});
+
+			console.log(ctx, myChart);
+
+		</script>
+
+
+	</body>
+</html>
